@@ -133,6 +133,11 @@ const app = Fastify({
 app.register(fastifyHelmet, {
   contentSecurityPolicy: false, // Disable CSP
   xPoweredBy: false,
+  // Helmet's default frameguard sends X-Frame-Options: SAMEORIGIN, which stops the
+  // app from being displayed inside an iframe hosted on another origin. Sandbox
+  // previews embed the site this way, so allow it when PREVIEW_MODE=1 is set.
+  // Unset by default: normal runs keep the upstream clickjacking protection.
+  frameguard: process.env.PREVIEW_MODE === '1' ? false : { action: 'sameorigin' },
 });
 
 // Assign server file paths to different paths, for serving content on the website.

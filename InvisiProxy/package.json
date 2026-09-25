@@ -40,7 +40,7 @@
     "@mercuryworkshop/scramjet": "2.0.67-alpha.2",
     "@mercuryworkshop/scramjet-controller": "0.0.14",
     "@mercuryworkshop/scramjet-utils": "^0.0.3",
-    "@titaniumnetwork-dev/ultraviolet": "https://github.com/titaniumnetwork-dev/Ultraviolet/releases/download/v3.2.10-headers/titaniumnetwork-dev-ultraviolet-3.2.10-headers.tgz",
+    "@titaniumnetwork-dev/ultraviolet": "file:./vendor/titaniumnetwork-dev-ultraviolet-3.2.10-headers.tgz",
     "axios": "^1.20.0",
     "fastify": "^5.12.3",
     "mrrowisp": "^3.1.6",
