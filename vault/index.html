@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-density="comfortable">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Vault</title>
+  <meta name="description" content="Vault — your private file vault. Organized, protected, yours." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230a0a0b'/%3E%3Cg fill='none' stroke='%23f5f5f7' stroke-width='2.6' stroke-linecap='round'%3E%3Crect x='10' y='10' width='28' height='28' rx='8'/%3E%3Ccircle cx='24' cy='24' r='6.4'/%3E%3Cpath d='M24 13.6v3.4M24 31v3.4M13.6 24H17M31 24h3.4'/%3E%3C/g%3E%3Ccircle cx='24' cy='24' r='1.9' fill='%23f5f5f7'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app" aria-busy="true">
+    <div class="splash" id="splash">
+      <div class="splash-mark" aria-hidden="true"></div>
+      <div class="splash-name">Vault</div>
+      <div class="splash-bar"><span></span></div>
+      <p>Preparing your vault…</p>
+    </div>
+  </div>
+
+  <div id="drawer-root" class="overlay-root" hidden></div>
+  <div id="modal-root" class="overlay-root" hidden></div>
+  <div id="ctx-root" class="overlay-root" hidden></div>
+  <div id="palette-root" class="overlay-root" hidden></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <input type="file" id="file-input" multiple hidden aria-hidden="true" />
+
+  <noscript><div style="padding:40px;font-family:system-ui">Vault requires JavaScript to run.</div></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
